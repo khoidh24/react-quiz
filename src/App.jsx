@@ -79,7 +79,7 @@ const App = () => {
   )
 
   useEffect(() => {
-    fetch('https://cdn.jsdelivr.net/gh/khoidh24/react-quiz/data/questions.json')
+    fetch('https://cdn.jsdelivr.net/gh/khoidh24/sample-json/quiz.json')
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'dataReceived', payload: data }))
       .catch(() => dispatch({ type: 'dataFailed' }))
