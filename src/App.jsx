@@ -79,7 +79,9 @@ const App = () => {
   )
 
   useEffect(() => {
-    fetch('http://localhost:8000/questions')
+    fetch(
+      'https://cdn.jsdelivr.net/gh/khoidh24/react-quiz/blob/main/data/questions.json'
+    )
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'dataReceived', payload: data }))
       .catch(() => dispatch({ type: 'dataFailed' }))
