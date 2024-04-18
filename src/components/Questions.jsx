@@ -5,7 +5,6 @@ import Answers from './Answers'
 const Questions = () => {
   const { questions, index } = useQuiz()
   const question = questions.at(index)
-  console.table(question)
   return (
     <div>
       <h4>{question.question}</h4>
