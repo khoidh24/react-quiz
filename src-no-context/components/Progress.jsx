@@ -1,9 +1,11 @@
-import { useQuiz } from '../contexts/QuizContext'
-
 /* eslint-disable react/prop-types */
-const Progress = () => {
-  const { index, numberOfQuestions, points, maxPossiblePoints, answer } =
-    useQuiz()
+const Progress = ({
+  index,
+  numberOfQuestions,
+  points,
+  maxPossiblePoints,
+  answer
+}) => {
   return (
     <header className='progress'>
       <progress

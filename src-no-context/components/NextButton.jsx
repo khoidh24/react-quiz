@@ -1,8 +1,5 @@
-import { useQuiz } from '../contexts/QuizContext'
-
 /* eslint-disable react/prop-types */
-const NextButton = () => {
-  const { index, dispatch, answer, numberOfQuestions } = useQuiz()
+const NextButton = ({ index, dispatch, answer, numberOfQuestions }) => {
   if (answer === null) return null
 
   if (index < numberOfQuestions - 1)

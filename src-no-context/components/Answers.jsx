@@ -1,9 +1,5 @@
-import { useQuiz } from '../contexts/QuizContext'
-
 /* eslint-disable react/prop-types */
-const Answers = ({ question }) => {
-  const { dispatch, answer } = useQuiz()
-
+const Answers = ({ question, dispatch, answer }) => {
   const hasAnswered = answer !== null
 
   return (

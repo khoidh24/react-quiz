@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
+import { useQuiz } from '../contexts/QuizContext'
 import Answers from './Answers'
 
-const Questions = ({ questions, dispatch, answer }) => {
-  console.table(questions)
+const Questions = () => {
+  const { questions, index } = useQuiz()
+  const question = questions.at(index)
+  console.table(question)
   return (
     <div>
-      <h4>{questions.question}</h4>
-      <Answers question={questions} dispatch={dispatch} answer={answer} />
+      <h4>{question.question}</h4>
+      <Answers question={question} />
     </div>
   )
 }
